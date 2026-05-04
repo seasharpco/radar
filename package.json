@@ -1,0 +1,41 @@
+{
+  "name": "@seasharpco/radar",
+  "version": "0.1.0",
+  "description": "Shared SeaSharp browser QA automation runner and Playwright utilities.",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "types": "./src/index.d.mts",
+  "bin": {
+    "radar": "./src/cli.mjs",
+    "radar-ui-qa": "./src/cli.mjs",
+    "ui-qa": "./src/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.mts",
+      "import": "./src/index.mjs"
+    },
+    "./cli": {
+      "import": "./src/cli.mjs"
+    }
+  },
+  "files": [
+    "src",
+    "!src/*.test.mjs",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node --check src/index.mjs && node --check src/cli.mjs && node --check src/artifacts.mjs && node --check src/control-audit.mjs && node --check src/report.mjs && node --check src/visible-control-audit.mjs",
+    "lint": "npm run build",
+    "test": "node --test src/cli.test.mjs"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "peerDependencies": {
+    "playwright": ">=1.53.0 <2"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.0"
+  }
+}
