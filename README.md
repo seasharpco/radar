@@ -1,11 +1,11 @@
-# SeaSharp Radar
+# Radar
 
-Shared SeaSharp QA automation utilities.
+Shared browser QA automation utilities.
 
 ## UI QA Runner
 
 `@seasharpco/radar` provides a standalone browser QA runner that can be added to
-any SeaSharp repo. It inventories visible controls, checks labels/readability,
+any repo that uses Playwright. It inventories visible controls, checks labels/readability,
 focuses enabled controls, captures issue screenshots, and writes JSON plus
 Markdown reports.
 
@@ -42,6 +42,6 @@ Run:
 npx ui-qa --config ui-qa.config.mjs
 ```
 
-The repo using Radar owns app-specific service startup, auth setup, seed data,
+The consuming repo owns app-specific service startup, auth setup, seed data,
 surface inventory, and workflow assertions. Radar owns the reusable control
 audit, screenshots, reporting, optional process startup, and health polling.

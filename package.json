@@ -1,7 +1,7 @@
 {
   "name": "@seasharpco/radar",
   "version": "0.1.0",
-  "description": "Shared SeaSharp browser QA automation runner and Playwright utilities.",
+  "description": "Browser QA automation runner and Playwright utilities.",
   "type": "module",
   "main": "./src/index.mjs",
   "types": "./src/index.d.mts",
